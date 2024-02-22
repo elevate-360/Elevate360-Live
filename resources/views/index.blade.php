@@ -15,7 +15,7 @@
                         <div class="container">
                             <div class="row justify-content-start">
                                 <div class="col-lg-7 text-start">
-                                    <p class="fs-4 text-white animated slideInRight">Welcome to <strong>GrowMark</strong>
+                                    <p class="fs-4 text-white animated slideInRight">Welcome to <strong>Elevate360</strong>
                                     </p>
                                     <h1 class="display-1 text-white mb-4 animated slideInRight">Unlock Your Business Growth
                                     </h1>
@@ -33,7 +33,7 @@
                         <div class="container">
                             <div class="row justify-content-end">
                                 <div class="col-lg-7 text-end">
-                                    <p class="fs-4 text-white animated slideInLeft">Welcome to <strong>GrowMark</strong></p>
+                                    <p class="fs-4 text-white animated slideInLeft">Welcome to <strong>Elevate360</strong></p>
                                     <h1 class="display-1 text-white mb-5 animated slideInLeft">Ready to Grow Your Business
                                     </h1>
                                     <a href=""
@@ -392,10 +392,12 @@
                         <div class="col-sm-6">
                             <div class="form-floating">
                                 <select class="form-select" id="service">
-                                    <option selected>Digital Marketing</option>
-                                    <option value="">Social Marketing</option>
-                                    <option value="">Content Marketing</option>
-                                    <option value="">E-mail Marketing</option>
+                                    <option selected>Website Development</option>
+                                    <option value="">Andriod Application Development</option>
+                                    <option value="">IOS Application Development</option>
+                                    <option value="">Cross-Platform Application Development</option>
+                                    <option value="">Cross-Platform Application Development</option>
+                                    <option value="">Search Engine Optimization (SEO)</option>
                                 </select>
                                 <label for="service">Choose A Service</label>
                             </div>
@@ -427,7 +429,7 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item rounded overflow-hidden pb-4">
                         <img class="img-fluid mb-4" src="img/team-1.jpg" alt="">
-                        <h5>Alex Robin</h5>
+                        <h5>Jay Chauhan</h5>
                         <span class="text-primary">Founder & CEO</span>
                         <ul class="team-social">
                             <li><a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a></li>
@@ -440,7 +442,7 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="team-item rounded overflow-hidden pb-4">
                         <img class="img-fluid mb-4" src="img/team-2.jpg" alt="">
-                        <h5>Adam Crew</h5>
+                        <h5>Aditya Bhansali</h5>
                         <span class="text-primary">Co Founder</span>
                         <ul class="team-social">
                             <li><a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a></li>
