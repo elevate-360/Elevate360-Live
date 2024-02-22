@@ -396,7 +396,6 @@
                                     <option value="">Andriod Application Development</option>
                                     <option value="">IOS Application Development</option>
                                     <option value="">Cross-Platform Application Development</option>
-                                    <option value="">Cross-Platform Application Development</option>
                                     <option value="">Search Engine Optimization (SEO)</option>
                                 </select>
                                 <label for="service">Choose A Service</label>
