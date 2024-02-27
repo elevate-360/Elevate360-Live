@@ -1,10 +1,8 @@
-@extends('master')
-
-@section('home')
+<?php $__env->startSection('home'); ?>
     active
-@endsection
+<?php $__env->stopSection(); ?>
 
-@section('content')
+<?php $__env->startSection('content'); ?>
     <!-- Carousel Start -->
     <div class="container-fluid px-0 mb-5">
         <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -352,11 +350,11 @@
                     <p style="text-align: justify;">Our team is dedicated to providing tailored IT solutions and support to ensure your business thrives. From innovative strategies to custom software development, we're your partners in navigating the digital landscape.</p>
                     <p class="mb-4" style="text-align: justify;">With round-the-clock support, we ensure your operations are seamless. Let's tackle your digital challenges together and drive your success.</p>
                     <a class="d-inline-flex align-items-center rounded overflow-hidden border border-primary"
-                        href="tel:+91{{ $contactDetails["contactNumber"] }}">
+                        href="tel:+91<?php echo e($contactDetails["contactNumber"]); ?>">
                         <span class="btn-lg-square bg-primary" style="width: 55px; height: 55px;">
                             <i class="fa fa-phone-alt text-white"></i>
                         </span>
-                        <span class="fs-5 fw-medium mx-4">{{ "+91 " . substr_replace($contactDetails["contactNumber"], ' ', 5, 0) }}</span>
+                        <span class="fs-5 fw-medium mx-4"><?php echo e("+91 " . substr_replace($contactDetails["contactNumber"], ' ', 5, 0)); ?></span>
                     </a>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
@@ -512,4 +510,6 @@
         </div>
     </div>
     <!-- Testimonial End -->
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /home/sf-dev/Desktop/Jay/New Projects/Elevate360-Live/resources/views/index.blade.php ENDPATH**/ ?>
