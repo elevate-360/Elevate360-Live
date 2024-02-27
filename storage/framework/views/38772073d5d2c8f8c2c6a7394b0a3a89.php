@@ -50,13 +50,13 @@
                     <h2 class="text-white fw-bold m-0">Elevate360</h2>
                 </a>
                 <div class="ms-auto d-flex align-items-center">
-                    <small class="ms-4"><i class="fa fa-map-marker-alt me-3"></i>{{ $contactDetails["city"] . ", " . $contactDetails["state"] . ", " . strtoupper($contactDetails["countryShort"]) }}</small>
-                    <small class="ms-4"><i class="fa fa-envelope me-3"></i>{{ $contactDetails["emailAddress"] }}</small>
-                    <small class="ms-4"><i class="fa fa-phone-alt me-3"></i>{{ "+91 " . substr_replace($contactDetails["contactNumber"], ' ', 5, 0) }}</small>
+                    <small class="ms-4"><i class="fa fa-map-marker-alt me-3"></i><?php echo e($contactDetails["city"] . ", " . $contactDetails["state"] . ", " . strtoupper($contactDetails["countryShort"])); ?></small>
+                    <small class="ms-4"><i class="fa fa-envelope me-3"></i><?php echo e($contactDetails["emailAddress"]); ?></small>
+                    <small class="ms-4"><i class="fa fa-phone-alt me-3"></i><?php echo e("+91 " . substr_replace($contactDetails["contactNumber"], ' ', 5, 0)); ?></small>
                     <div class="ms-3 d-flex">
-                        <a class="btn btn-sm-square btn-light text-primary rounded-circle me-2" href="{{ $links["Twitter"]["lAddress"] }}" target="_blank" rel="noopener"><i class="{{ $links["Twitter"]["lClass"] }}"></i></a>
-                        <a class="btn btn-sm-square btn-light text-primary rounded-circle me-2" href="{{ $links["Youtube"]["lAddress"] }}" target="_blank" rel="noopener"><i class="{{ $links["Youtube"]["lClass"] }}"></i></a>
-                        <a class="btn btn-sm-square btn-light text-primary rounded-circle me-2" href="{{ $links["Linkedin"]["lAddress"] }}" target="_blank" rel="noopener"><i class="{{ $links["Linkedin"]["lClass"] }} "></i></a>
+                        <a class="btn btn-sm-square btn-light text-primary rounded-circle me-2" href="<?php echo e($links["Twitter"]["lAddress"]); ?>" target="_blank" rel="noopener"><i class="<?php echo e($links["Twitter"]["lClass"]); ?>"></i></a>
+                        <a class="btn btn-sm-square btn-light text-primary rounded-circle me-2" href="<?php echo e($links["Youtube"]["lAddress"]); ?>" target="_blank" rel="noopener"><i class="<?php echo e($links["Youtube"]["lClass"]); ?>"></i></a>
+                        <a class="btn btn-sm-square btn-light text-primary rounded-circle me-2" href="<?php echo e($links["Linkedin"]["lAddress"]); ?>" target="_blank" rel="noopener"><i class="<?php echo e($links["Linkedin"]["lClass"]); ?> "></i></a>
                     </div>
                 </div>
             </div>
@@ -77,10 +77,10 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav">
-                        <a href="/" class="nav-item nav-link @yield('home')">Home</a>
-                        <a href="/about" class="nav-item nav-link @yield('about')">About</a>
-                        <a href="/service" class="nav-item nav-link @yield('services')">Services</a>
-                        <a href="/projects" class="nav-item nav-link @yield('projects')">Projects</a>
+                        <a href="/" class="nav-item nav-link <?php echo $__env->yieldContent('home'); ?>">Home</a>
+                        <a href="/about" class="nav-item nav-link <?php echo $__env->yieldContent('about'); ?>">About</a>
+                        <a href="/service" class="nav-item nav-link <?php echo $__env->yieldContent('services'); ?>">Services</a>
+                        <a href="/projects" class="nav-item nav-link <?php echo $__env->yieldContent('projects'); ?>">Projects</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                             <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
@@ -91,7 +91,7 @@
                                 <a href="/404" class="dropdown-item">404 Page</a>
                             </div>
                         </div>
-                        <a href="/contact" class="nav-item nav-link @yield('contact')">Contact</a>
+                        <a href="/contact" class="nav-item nav-link <?php echo $__env->yieldContent('contact'); ?>">Contact</a>
                     </div>
                     <div class="ms-auto d-none d-lg-block">
                         <a href="" class="btn btn-primary rounded-pill py-2 px-3">Get A Quote</a>
@@ -103,7 +103,7 @@
     <!-- Navbar End -->
 
     <!-- Page Content Start -->
-    @yield('content')
+    <?php echo $__env->yieldContent('content'); ?>
     <!-- Page Content End -->
 
     <!-- Footer Start -->
@@ -112,18 +112,18 @@
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-4">Our Office</h4>
-                    <a style="color: #B0B9AE;" target="_blank" rel="noopener" href="http://www.google.com/maps/search/?api=1&query=21.219394,%2072.772287"><p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>{{ $contactDetails["city"] . ", " . $contactDetails["state"] . ", " . $contactDetails["country"] }}</p></a>
-                    <a style="color: #B0B9AE;" href="tel:+91{{ $contactDetails["contactNumber"] }}"><p class="mb-2"><i class="fa fa-phone-alt me-3"></i>{{ "+91 " . substr_replace($contactDetails["contactNumber"], ' ', 5, 0) }}</p></a>
-                    <a style="color: #B0B9AE;" target="_blank" rel="noopener" href="https://mail.google.com/mail/u/0/?fs=1&to={{ $contactDetails["emailAddress"] }}&tf=cm"><p class="mb-2"><i class="fa fa-envelope me-3"></i>{{ $contactDetails["emailAddress"] }}</p></a>
+                    <a style="color: #B0B9AE;" target="_blank" rel="noopener" href="http://www.google.com/maps/search/?api=1&query=21.219394,%2072.772287"><p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i><?php echo e($contactDetails["city"] . ", " . $contactDetails["state"] . ", " . $contactDetails["country"]); ?></p></a>
+                    <a style="color: #B0B9AE;" href="tel:+91<?php echo e($contactDetails["contactNumber"]); ?>"><p class="mb-2"><i class="fa fa-phone-alt me-3"></i><?php echo e("+91 " . substr_replace($contactDetails["contactNumber"], ' ', 5, 0)); ?></p></a>
+                    <a style="color: #B0B9AE;" target="_blank" rel="noopener" href="https://mail.google.com/mail/u/0/?fs=1&to=<?php echo e($contactDetails["emailAddress"]); ?>&tf=cm"><p class="mb-2"><i class="fa fa-envelope me-3"></i><?php echo e($contactDetails["emailAddress"]); ?></p></a>
                     <div class="d-flex pt-3">
-                        <a class="btn btn-square btn-light rounded-circle me-2" href="{{ $links["Twitter"]["lAddress"] }}" target="_blank" rel="noopener"><i
-                                class="{{ $links["Twitter"]["lClass"] }}"></i></a>
-                        <a class="btn btn-square btn-light rounded-circle me-2" href="{{ $links["Facebook"]["lAddress"] }}" target="_blank" rel="noopener"><i
-                                class="{{ $links["Facebook"]["lClass"] }} "></i></a>
-                        <a class="btn btn-square btn-light rounded-circle me-2" href="{{ $links["Youtube"]["lAddress"] }}" target="_blank" rel="noopener"><i
-                                class="{{ $links["Youtube"]["lClass"] }}"></i></a>
-                        <a class="btn btn-square btn-light rounded-circle me-2" href="{{ $links["Linkedin"]["lAddress"] }}" target="_blank" rel="noopener"><i
-                                class="{{ $links["Linkedin"]["lClass"] }} "></i></a>
+                        <a class="btn btn-square btn-light rounded-circle me-2" href="<?php echo e($links["Twitter"]["lAddress"]); ?>" target="_blank" rel="noopener"><i
+                                class="<?php echo e($links["Twitter"]["lClass"]); ?>"></i></a>
+                        <a class="btn btn-square btn-light rounded-circle me-2" href="<?php echo e($links["Facebook"]["lAddress"]); ?>" target="_blank" rel="noopener"><i
+                                class="<?php echo e($links["Facebook"]["lClass"]); ?> "></i></a>
+                        <a class="btn btn-square btn-light rounded-circle me-2" href="<?php echo e($links["Youtube"]["lAddress"]); ?>" target="_blank" rel="noopener"><i
+                                class="<?php echo e($links["Youtube"]["lClass"]); ?>"></i></a>
+                        <a class="btn btn-square btn-light rounded-circle me-2" href="<?php echo e($links["Linkedin"]["lAddress"]); ?>" target="_blank" rel="noopener"><i
+                                class="<?php echo e($links["Linkedin"]["lClass"]); ?> "></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -176,9 +176,7 @@
     <!-- Copyright End -->
 
 
-    {{-- <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
-            class="bi bi-arrow-up"></i></a> --}}
+    
 
 
     <!-- JavaScript Libraries -->
@@ -195,3 +193,4 @@
 </body>
 
 </html>
+<?php /**PATH /home/sf-dev/Desktop/Jay/New Projects/Elevate360-Live/resources/views/master.blade.php ENDPATH**/ ?>
